@@ -1,0 +1,158 @@
+#PROGRAM BANK SAMPAH SALSA AYUNDA
+
+def SelamatDatang():
+    print("Selamat Datang di Bank Sampah Mawar, Kami Siap Melayani Anda!")
+    print("")
+    print("")
+    
+#MENU 1:IDENTITAS
+def identitas():
+    global nama,nomor
+    nama=[]
+    nomor=[]
+
+    pilihan=1
+    while pilihan !=0:
+        print("1. Input Identitas Admin")
+        print("2. Input Identitas Nasabah")
+    
+        pilihan=int(input("Masukkan Pilihan (1/2): "))
+        print("")
+        print("")
+        if pilihan==1:
+            Nama=input("Masukkan Nama Anda sebagai Admin : ")
+            nomor.append([Nama])
+            NomorID=int(input("Masukkan Nomor ID :"))
+            nomor.append([NomorID])
+            print("")
+            print("")
+            identitas()
+            
+            
+        elif pilihan==2:
+            Nama=input("Masukkan Nama Anda sebagai Nasabah: ")
+            nama.append([Nama])
+            NomorRekening=int(input("Masukkan Nomor Rekening: "))
+            nomor.append([NomorRekening])
+            NomorAntrian=int(input("Ambil Nomor Antrian: "))
+            nomor.append([NomorAntrian])
+            daftarharga()
+            return 
+        
+#MENU2:ADMIN
+
+#MENENTUKAN HARGA
+
+def daftarharga():
+    print("Daftar Barang Beserta Harga")
+    print("")
+    print("1. Ban : Rp.35000")
+    print("2. Lampu : Rp.7000")
+    print("3. Kipas Angin : Rp.75000")
+    print("4. Buku : Rp.11000")
+    print("5. Kursi : Rp.125000")
+    print("6. Kardus : Rp.5000")
+    print("7. Kabel : Rp.3000")
+    print("")
+    print("")
+    daftarbarang()
+    
+#MENU 3:NASABAH
+
+#MENYETORKAN BARANG
+
+def daftarbarang():
+    global BeratBarang, HargaPerKG
+
+    berat=[]
+    harga=[]
+
+    pilihan=1
+    while pilihan !=0:
+        print("Daftar Barang")
+        print("")
+        print("")
+        print("1. Ban")
+        print("2. Lampu")
+        print("3. Kipas Angin")
+        print("4. Buku")
+        print("5. Kursi")
+        print("6. Kardus")
+        print("7. Kabel")
+        print("0. Exit")
+        print("")
+        print("")
+    
+        pilihan=int(input("Masukkan pilihan (1/2/3/4/5/6/7): "))
+        print("")
+        print("")
+        def multiply(BeratBarang, HargaPerKG):
+            return BeratBarang*HargaPerKG
+        if pilihan==1:
+            print("Ban")
+            BeratBarang=int(input("Masukkan Berat Ban: "))
+            berat.append([BeratBarang])
+            HargaPerKG=35000
+            harga.append([HargaPerKG])
+            print("Harga :", multiply(BeratBarang, HargaPerKG))
+            print("")
+        
+        elif pilihan==2:
+            print("Lampu")
+            BeratBarang=int(input("Masukkan Berat Lampu: "))
+            berat.append([BeratBarang])
+            HargaPerKG=7000
+            harga.append([HargaPerKG])
+            print("Harga :", multiply(BeratBarang, HargaPerKG))
+            print("")
+    
+        elif pilihan==3:
+            print("Kipas Angin")
+            BeratBarang=int(input("Masukkan Berat Kipas Angin: "))
+            berat.append([BeratBarang])
+            HargaPerKG=75000
+            harga.append([HargaPerKG])
+            print("Harga :", multiply(BeratBarang, HargaPerKG))
+            print("")
+        
+        elif pilihan==4:
+            print("Buku")
+            BeratBarang=int(input("Masukkan Berat Buku: "))
+            berat.append([BeratBarang])
+            HargaPerKG=11000
+            harga.append([HargaPerKG])
+            print("Harga :", multiply(BeratBarang, HargaPerKG))
+            print("")
+        
+        elif pilihan==5:
+            print("Kursi")
+            BeratBarang=int(input("Masukkan Berat Kursi: "))
+            berat.append([BeratBarang])
+            HargaPerKG=125000
+            harga.append([HargaPerKG])
+            print("Harga :", multiply(BeratBarang, HargaPerKG))
+            print("")
+    
+        elif pilihan==6:
+            print("Kardus")
+            BeratBarang=int(input("Masukkan Berat Kardus: "))
+            berat.append([BeratBarang])
+            HargaPerKG=5000
+            harga.append([HargaPerKG])
+            print("Harga :", multiply(BeratBarang, HargaPerKG))
+            print("")
+        
+        elif pilihan==7:
+            print("Kabel")
+            BeratBarang=int(input("Masukkan Berat Kabel: "))
+            berat.append([BeratBarang])
+            HargaPerKG=3000
+            harga.append([HargaPerKG])
+            print("Harga :", multiply(BeratBarang, HargaPerKG))
+            print("")
+            
+        elif pilihan==0:
+            print("Selesai")
+            
+SelamatDatang()
+identitas()  
